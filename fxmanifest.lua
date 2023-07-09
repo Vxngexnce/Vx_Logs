@@ -2,7 +2,7 @@
 version '1.0'
 author 'Vxngexnce'
 description 'FXServer logs to Discord'
-repository 'https://github.com/prefech/JD_logsV3'
+repository 'https://github.com/Vxngexnce/Vx_Logs'
 
 
 dependency 'yarn'
