@@ -292,7 +292,7 @@ end)
 
 CreateThread( function() --[[ Version Checker ]]
 	local version = GetResourceMetadata(GetCurrentResourceName(), 'version')
-	PerformHttpRequest('https://raw.githubusercontent.com/Vxngexnce/Vx_logs/main/Vx_logsV1/json/version.json?token=GHSAT0AAAAAACE4TSWKCUSRHX6WPDHLTHOSZFLEIAA', function(code, res, headers)
+	PerformHttpRequest('https://raw.githubusercontent.com/Vxngexnce/Vx_Logs/v1.0.0/json/version.json', function(code, res, headers)
 		if code == 200 then
 			local rv = json.decode(res)
 			if tonumber(table.concat(mysplit(rv.version, "."))) > tonumber(table.concat(mysplit(version, "."))) then
