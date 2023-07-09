@@ -1,0 +1,16 @@
+{
+  "name": "vx_logsv1",
+  "version": "1.0.0",
+  "description": "Vx_logs version 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vxngexnce",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "JokeDevil/discord.js#cfx/13.x",
+    "fn": "^0.2.0",
+    "glob": "^7.1.7"
+  }
+}
