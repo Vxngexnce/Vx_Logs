@@ -108,13 +108,13 @@ end)
 
 AddEventHandler("playerJoining", function(newID, oldID) --[[ Name Change Logs / Discord Ace Perms. ]]
 	local ids = ServerFunc.ExtractIdentifiers(newID)
-	local oldName = GetResourceKvpString("JD_logs:nameChane:"..ids.license)
+	local oldName = GetResourceKvpString("Vx_logs:nameChane:"..ids.license)
 	if oldName == nil then
 		SetResourceKvp("JD_logs:nameChane:"..ids.license, GetPlayerName(newID))
 	else
 		if oldName ~= GetPlayerName(newID) then
 			ServerFunc.CreateLog({EmbedMessage = lang.nameChange.msg:gsub("{old_name}", oldName):gsub("{new_name}", GetPlayerName(newID)), player_id = newID, channel = 'nameChange'})
-			SetResourceKvp("JD_logs:nameChane:"..ids.license, GetPlayerName(newID))
+			SetResourceKvp("Vx_logs:nameChane:"..ids.license, GetPlayerName(newID))
 			for k,v in pairs(GetPlayers()) do
 				if IsPlayerAceAllowed(v, Config.NameChangePerms) then
 					TriggerClientEvent('chat:addMessage', i, {
