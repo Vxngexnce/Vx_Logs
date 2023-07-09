@@ -63,7 +63,7 @@ ServerFunc.CreateLog = function(data)
                     color = ConvertColor(color),
                     footer = {
                         text = "Vx_logs V" .. GetResourceMetadata(GetCurrentResourceName(), 'version') .. "  •  Made by Vxngexnce",
-                        icon_url = "https://prefech.com/assets/favicon/apple-touch-icon.png"
+                        icon_url = "https://avatars.githubusercontent.com/u/139078338?s=400&u=f8d7fb972db605776e85494517b4dff7ccd91dfd&v=4"
                     },
                     timestamp = os.date("%Y-%m-%d") .. "T" ..os.date("%H:%M:%S") .. ".0000".. Config.TimezoneOffset
                 }
