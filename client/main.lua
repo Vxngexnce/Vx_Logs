@@ -26,20 +26,22 @@ AddEventHandler("Vxngexnce:Vx_logsV1:SendConfigSettings", function(data)
 end)
 
 --[[ Screenshot request on client. ]]
-RegisterNetEvent('Vxngexnce:Vx_logsV1:ClientCreateScreenshot')
-AddEventHandler('Vxngexnce:Vx_logsV1:ClientCreateScreenshot', function(args)
-    exports['screenshot-basic']:requestScreenshotUpload('https://discord.com/api/webhooks/'..args.url, 'files[]', function(data)
+RegisterNetEvent("Vxngexnce:Vx_logsV1:ClientCreateScreenshot")
+AddEventHandler("Vxngexnce:Vx_logsV1:ClientCreateScreenshot", function(args)
+    exports["screenshot-basic"]:requestScreenshotUpload("https://discord.com/api/webhooks/"..args.url, "files[]", function(data)
         local resp = json.decode(data)
 		if resp.attachments then
             if args.screenshot then
                 args.imageUrl = resp.attachments[1].url
                 args.screenshot = false
-            end
-            if args.screenshot_2 and not args.screenshot then
+            elseif args.screenshot_2 then
                 args.imageUrl_2 = resp.attachments[1].url
                 args.screenshot_2 = false
             end
-            TriggerServerEvent('Vxngexnce:Vx_logsV1:ScreenshotCB', args)
+            TriggerServerEvent("Vxngexnce:Vx_logsV1:ScreenshotCB", args)
+            if not args.screenshot and not args.screenshot_2 then
+                args.screenshot_2 = true
+            end
         end
     end)
 end)
