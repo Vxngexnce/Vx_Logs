@@ -37,7 +37,7 @@ Discord Commands:
 		- Will hide the ip from the screenshot logs.
 - resethook
 	- !vxlogs resethook
-		- Will create a new webhook for imageStore. (Everytime JD_logsV3 starts the resource will create a new webhook anyways.)
+		- Will create a new webhook for imageStore. (Everytime Vx_logsV1 starts the resource will create a new webhook anyways.)
 - players
 	- !vxlogs players
 		- Will return a list of online players and their server id.
